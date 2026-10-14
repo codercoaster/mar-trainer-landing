@@ -748,6 +748,8 @@ button:disabled, button:disabled * { cursor: default; }
 .js .hero__title,
 .js .hero__eyebrow,
 .js .hero__bottom { visibility: hidden; }
+.js .hero__media { clip-path: inset(100% 0% 0% 0%); }
+.js .nav > * { opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

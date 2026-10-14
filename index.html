@@ -24,6 +24,14 @@
 
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
 
+    <link
+      rel="preload"
+      as="image"
+      href="assets/img/mar-hero.webp"
+      imagesrcset="assets/img/mar-hero-800.webp 800w, assets/img/mar-hero.webp 1340w"
+      imagesizes="(max-width: 900px) 100vh, 74vh"
+      fetchpriority="high"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -77,6 +85,8 @@
         <div class="hero__media">
           <img
             src="assets/img/mar-hero.webp"
+            srcset="assets/img/mar-hero-800.webp 800w, assets/img/mar-hero.webp 1340w"
+            sizes="(max-width: 900px) 100vh, 74vh"
             alt="Mar, entrenadora personal, posando en el gimnasio"
             width="1340"
             height="1340"

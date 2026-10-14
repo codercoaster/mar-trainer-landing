@@ -59,19 +59,22 @@
   const heroSplit = SplitText.create('.hero__line', { type: 'lines', mask: 'lines' });
   gsap.set(['.hero__title', '.hero__eyebrow', '.hero__bottom'], { visibility: 'visible' });
 
-  if (!reduce) {
-    gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.4 } })
+  if (reduce) {
+    gsap.set('.hero__media', { clipPath: 'none' });
+    gsap.set('.nav > *', { autoAlpha: 1 });
+  } else {
+    gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.2 } })
       .fromTo('.hero__media',
         { clipPath: 'inset(100% 0% 0% 0%)' },
-        { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6, ease: 'expo.inOut' })
-      .fromTo('.hero__media img', { scale: 1.4 }, { scale: 1.1, duration: 2.2 }, '<')
-      .from('.nav > *', { y: -30, autoAlpha: 0, stagger: 0.08, duration: 1 }, '<0.4')
-      .from(heroSplit.lines, { yPercent: 110, stagger: 0.12 }, '-=1.4')
+        { clipPath: 'inset(0% 0% 0% 0%)', ease: 'expo.out' }, 0)
+      .fromTo('.hero__media img', { scale: 1.3 }, { scale: 1.1, duration: 1.8 }, 0)
+      .from(heroSplit.lines, { yPercent: 110, stagger: 0.08 }, 0)
       .fromTo('.hero__line--flex',
         { '--wdth': 62, '--wght': 900 },
-        { '--wdth': 125, '--wght': 300, duration: 1.8, ease: 'expo.inOut' }, '-=1.2')
-      .from('.hero__eyebrow', { autoAlpha: 0, y: 20, duration: 1 }, '-=1.6')
-      .from('.hero__bottom > *', { autoAlpha: 0, y: 30, stagger: 0.1, duration: 1 }, '-=1.3');
+        { '--wdth': 125, '--wght': 300, duration: 1.4, ease: 'expo.inOut' }, 0.1)
+      .from('.hero__eyebrow', { autoAlpha: 0, y: 20, duration: 0.9 }, 0.05)
+      .from('.hero__bottom > *', { autoAlpha: 0, y: 30, stagger: 0.08, duration: 0.9 }, 0.2)
+      .fromTo('.nav > *', { y: -30, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.06, duration: 0.9 }, 0.1);
 
     gsap.to('.hero__media img', {
       yPercent: 5,
