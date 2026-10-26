@@ -2,7 +2,7 @@
 
 ### Mar Trainer
 
-Disponible en [codercoaster.github.io/mar-trainer-landing](https://codercoaster.github.io/mar-trainer-landing/)
+Disponible en [martrainer.com](https://martrainer.com/)
 Diseñado y desarrollado por [CoderCoaster](https://codercoaster.com/?utm_source=github&utm_medium=readme&utm_campaign=mar-trainer-landing).
 
 ![](https://raw.githubusercontent.com/codercoaster/codercoaster/main/assets/divider.svg)
